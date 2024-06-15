@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+/*GERAL mobile-first 375px*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+/*CORES*/
+
+/*PRIMARIAS*/
+
+:root {
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+}
+
+/*NEUTRAS*/
+
+:root {
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+}
+
+/*FONTE*/
+
+:root {
+    --fonteparagrafo: 'Red Hat Display';
+}
+
+/*TAMANHO DA FONTE*/
+:root {
+    --paragrafotam: 16px;
+    --boldfotam: 800;
+
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--fonteparagrafo);
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: var(--Paleblue) url('../imagens/pattern-background-desktop.svg') top center no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main {
+    background-color: white;
+    width: 300px;
+    height: 80vh;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+main h1 {
+    font-weight: 800;
+    color: var(--Darkblue);
+}
+
+main p {
+    font-weight: 500;
+    color: var(--Desaturatedblue);
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+}
+
+#pedido {
+    padding: 20px;
+    text-align: center;
+}
+
+#pedido > h1 {
+    padding: 15px;
+}
+
+div#plano {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Verypaleblue);
+    margin: auto;
+    padding: 35px 15px;
+    margin: 20px 0px;
+    width: 95%;
+    height: 60px;
+    border-radius: 15px;
+    font-family: var(--fonteparagrafo);
+
+}
+
+.bold {
+    font-family: var(--fonteparagrafo);
+    font-weight: var(--boldfotam);
+    color: var(--Darkblue);
+}
+
+#plano a {
+    font-family: var(--fonteparagrafo);
+    font-weight: var(--boldfotam);
+    color: var(--Brightblue);
+}
+
+#plano > img {
+    width: 40px;
+}
+
+#botaoprosseguir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Brightblue);
+    margin: 15px auto;
+    height: 50px;
+    width: 85%;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: -2px 3px 10px var(--Desaturatedblue) ;
+}
+
+#botaoprosseguir:hover {
+    background-color: var(--Darkblue);
+    box-shadow: -2px 3px 10px var(--Brightblue);
+    width: 78%;
+    transition: 0.7s;
+}
+
+#inputresetar {
+    border: none;
+    text-decoration: none;
+    background: none;
+    font-family: var(--fonteparagrafo);
+    color: white;
+    font-weight: var(--boldfotam);
+    font-size: 14px;
+    cursor: pointer;
+
+}
+
+#inputresetar:hover {
+    font-size: 12px;
+    transition: 0.7s;
+}
+
+.cancel {
+    font-family: var(--fonteparagrafo);
+    font-weight: var(--boldfotam);
+    font-size: .9em;
+    cursor: pointer;
+}
+
+.cancel:hover {
+    text-decoration: underline;
+}
+
+
+/*Desktop*/
+@media screen and (min-width: 1440px) {
+    main {
+        width: 450px;
+    }
+}
