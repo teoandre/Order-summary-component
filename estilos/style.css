@@ -69,9 +69,15 @@ main p {
     justify-content: center;
 }
 
-img {
-    width: 100%;
+#imagem {
+    height: 30%;
+    background: var(--Paleblue) url(../imagens/illustration-hero.svg) center center no-repeat;
+    background-size: cover;
 }
+
+/* img {
+    width: 100%;
+} */
 
 #pedido {
     padding: 20px;
@@ -161,6 +167,55 @@ div#plano {
     text-decoration: underline;
 }
 
+/*Landscape*/
+@media screen and (max-width: 899px) and (max-height: 600px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        background-size: cover;
+        width: 600px;
+        height: 300px;
+    }
+
+    #imagem {
+        background-image: url(../imagens/illustration-hero.svg);
+        background-size: cover;
+        background-position: bottom center;
+        height: 300px;
+        width: 40%;
+    }
+
+    #pedido {
+        display: flex;
+        height: 250px;
+        width: 60%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+
+    }
+
+    #plano {
+        flex: 1;
+    }
+
+    #plano:first-child {
+        flex: 0 1 20%;
+    }
+
+    #botaoprosseguir {
+        flex: 1;
+        margin-top: -10px;
+    }
+
+
+    .cancel {
+        flex: 1;
+        margin-top: 5px;
+    }
+
+}
+
 
 /*Desktop*/
 @media screen and (min-width: 900px) {
@@ -168,4 +223,9 @@ div#plano {
         width: 450px;
         height: 600px;
     }
-}
+
+    #imagem {
+        height: 40%;
+        background: var(--Paleblue) url(../imagens/illustration-hero.svg) center center no-repeat;
+        background-size: cover;}
+    }
